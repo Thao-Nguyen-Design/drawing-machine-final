@@ -27,6 +27,18 @@ h1 {
   margin-bottom: 20px;
 }
 
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
+
+
 canvas {
   top: 0;
   left: 0;
@@ -81,9 +93,6 @@ canvas {
   outline: none;
   border: 5px solid white;
   border-radius: 8px;
-  /* opacity: 0.7; */
-  -webkit-transition: .2s;
-  transition: opacity .2s;
 }
 
 .strokeSlider::-webkit-slider-thumb {
@@ -107,9 +116,6 @@ canvas {
   outline: none;
   border: 5px solid white;
   border-radius: 8px;
-  /* opacity: 0.7; */
-  -webkit-transition: .2s;
-  transition: opacity .2s;
 }
 
 .symmetrySlider::-webkit-slider-thumb {
@@ -126,10 +132,12 @@ canvas {
 .slider1 {
   margin-left: 30px;
   opacity: 0.7;
+
 }
 
 .slider1:hover {
   opacity: 1;
+
 }
 
 .slider2 {

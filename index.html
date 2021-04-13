@@ -7,16 +7,18 @@
   <link rel="stylesheet" type="text/css" href="style.css">
   <meta charset="utf-8">
   <script src="sketch.js"></script>
+  <script src="circle.js"></script>
+
 </head>
 
 <body>
 
-  <div class="" id="canvasDiv">
+  <div class="noselect" id="canvasDiv">
     <h1>Drawing Machine</h1>
 
   </div>
 
-  <p id="one">
+  <p class= "noselect" id="one">
     I have always found reflection and <br>
     symmetry to be magical and captivating. <br>
     We as humans can never make something <br>
@@ -32,14 +34,24 @@
 
   </p>
 
-  <div class="slider1" id="sliderDiv">
+  <div class="slider1" id="sliderDiv"
+  style="-webkit-user-select: none;
+  unselectable="on"
+  onselectstart="return false;
+  onmousedown="return false;"
+  >
 
-    <input type="range" min="1" max="30" value="5" class="slider" id="strokeSlider">
+    <input type="range" min="1" max="30" value="5" class="noselect" id="strokeSlider">
     <p id="two"> Stroke weight: <span id="displaystroke"></span></p>
 
   </div>
 
-  <div class="slider2" id="sliderDiv">
+  <div class="slider2" id="sliderDiv"
+  style="-webkit-user-select: none;
+  unselectable="on"
+  onselectstart="return false;
+  onmousedown="return false;"
+  >
 
     <input type="range" min="1" max="36" value="6" class="slider" id="symmetrySlider">
     <p id="two">Rotational symmetry: <span id="displayaxis"></span></p>
@@ -48,28 +60,41 @@
 
   <br>
 
-  <div class="buttonClass" id="buttonDiv">
+  <div
+  class="buttonClass" id="buttonDiv" style="-webkit-user-select: none;
+  unselectable="on"
+  onselectstart="return false;
+  onmousedown="return false;">
+
     <button type="button" id="saveButton">save</button>
     <button type="button" id="clearButton">clear</button>
   </div>
 
   <script>
+  //slider 1
     var currentStroke = document.getElementById("strokeSlider");
-    var output = document.getElementById("displaystroke");
-    output.innerHTML = currentStroke.value;
+    var output1 = document.getElementById("displaystroke");
+    output1.innerHTML = currentStroke.value;
 
     currentStroke.oninput = function() {
-      output.innerHTML = this.value;
+      output1.innerHTML = this.value;
     }
+    </script>
 
+
+
+    <script>
+//slider 2
     var currentAxis = document.getElementById("symmetrySlider");
-    var output = document.getElementById("displayaxis");
-    output.innerHTML = currentAxis.value;
+    var output2 = document.getElementById("displayaxis");
+    output2.innerHTML = currentAxis.value;
 
     currentAxis.oninput = function() {
-      output.innerHTML = this.value;
+      output2.innerHTML = this.value;
     }
-  </script>
+
+    </script>
+
 </body>
 
 </html>

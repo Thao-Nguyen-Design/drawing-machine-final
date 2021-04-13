@@ -3,7 +3,7 @@ let circleArray = [];
 
 // let symmetry = 1;
 // let strokeSlider;
-let waiting = true;
+// let stage = "L1";
 let colorchange = 0;
 
 function setup() {
@@ -25,9 +25,11 @@ function setup() {
   // rect(0,0, 350, 600);
 
   strokeSlider = select("#strokeSlider");
+  strokeSlider.mousePressed();
   strokeSlider.class("strokeSlider");
 
   symmetrySlider = select("#symmetrySlider");
+  symmetrySlider.mousePressed();
   symmetrySlider.class("symmetrySlider");
 
   saveButton = select("#saveButton")
@@ -37,6 +39,8 @@ function setup() {
   clearButton = select("#clearButton")
   clearButton.mousePressed(clearMe);
   clearButton.class("clearButton");
+
+
 }
 
 
@@ -47,15 +51,11 @@ function draw() {
   px = pmouseX;
   py = pmouseY;
 
-if (waiting == true) {
-  waitingScreen();
-}
-
-  if ((x > 350 || y > 600) && mouseIsPressed) {
-    waiting = false;
+if ((x > 350 || y > 600) && mouseIsPressed) {
     startdraw();
   }
 }
+
 
 
 function startdraw() {
@@ -87,19 +87,6 @@ function startdraw() {
     pop();
 
   }
-}
-
-
-function waitingScreen(){
-waiting = true;
-  background(bgColor);
-
-  for (let i = 0; i < circleArray.length; i++) {
-    circleArray[i].display();
-    circleArray[i].move();
-
-  }
-
 }
 
 
