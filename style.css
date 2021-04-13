@@ -28,16 +28,20 @@ h1 {
 }
 
 .noselect {
-  -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-     -khtml-user-select: none; /* Konqueror HTML */
-       -moz-user-select: none; /* Firefox */
-        -ms-user-select: none; /* Internet Explorer/Edge */
-            user-select: none; /* Non-prefixed version, currently
-                                  supported by Chrome and Opera */
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
+  supported by Chrome and Opera */
 }
-
-
 
 canvas {
   top: 0;
@@ -89,7 +93,7 @@ canvas {
   -webkit-appearance: none;
   width: 170px;
   height: 12px;
-  background: #000;
+  background: transparent;
   outline: none;
   border: 5px solid white;
   border-radius: 8px;
@@ -112,7 +116,7 @@ canvas {
   /* margin-bottom: 25px; */
   width: 170px;
   height: 12px;
-  background: #000;
+  background: transparent;
   outline: none;
   border: 5px solid white;
   border-radius: 8px;
@@ -126,18 +130,16 @@ canvas {
   background: white;
   cursor: pointer;
   border: 5px solid white;
-  border-radius: 4px;
+  border-radius: 8px;
 }
 
 .slider1 {
   margin-left: 30px;
   opacity: 0.7;
-
 }
 
 .slider1:hover {
   opacity: 1;
-
 }
 
 .slider2 {
